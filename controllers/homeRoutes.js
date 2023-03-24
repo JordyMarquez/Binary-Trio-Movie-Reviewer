@@ -27,9 +27,23 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('//:id', async (req, res) => {
+router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
+      // include: [
+      //   User,
+      //   {
+      //     model: Review,
+      //     include: [User],
+      //   },
+      // ],
+      // order: [
+      //   [
+      //     { model: Review },
+      //     "date_created",
+      //     'DESC'
+      //   ]
+      // ]
       // include: [
       //   {
       //     model: User,
@@ -40,7 +54,7 @@ router.get('//:id', async (req, res) => {
 
     const movie = movieData.get({ plain: true });
 
-    res.render('movie', {
+    res.render('profile', {
       ...movie,
       logged_in: req.session.logged_in
     });
