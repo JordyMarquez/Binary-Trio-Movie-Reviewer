@@ -1,8 +1,9 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Movie, Review } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const movieData = require('./movieData.json');
+const reviewData = require('./reviewData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,10 +13,16 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  const movies = await Movie.bulkCreate(movieData, {
+    individualHooks: true,
+    returning: true,
+  });
+
+  for (const review of reviewData) {
+    await Review.create({
+      ...review,
       user_id: users[Math.floor(Math.random() * users.length)].id,
+      movie_id: movies[Math.floor(Math.random() * movies.length)].id,
     });
   }
 

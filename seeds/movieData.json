@@ -1,0 +1,53 @@
+[
+    {
+      "title": "To Kill a Mockingbird",
+      "genre": "Drama",
+      "year": 1962
+    },
+    {
+      "title": "2001: A Space Odyssey",
+      "genre": "Sci-Fi",
+      "year": 1962
+    },
+    {
+      "title": "The apartment",
+      "genre": "Comedy",
+      "year": 1960
+    },
+    {
+      "title": "The time machine",
+      "genre": "Adventure",
+      "year": 1960
+    },
+    {
+      "title": "The war of the worlds",
+      "genre": "Thriller",
+      "year": 1953
+    },
+    {
+      "title": "The Lord of the Rings: The Return of the King",
+      "genre": "Action",
+      "year": 2003
+    },
+    {
+      "title": "Avatar",
+      "genre": "Fantasy",
+      "year": 2009
+    },
+    {
+      "title": "Titanic",
+      "genre": "Romance",
+      "year": 1997
+    },
+    {
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "year": 1994
+    },
+    {
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "year": 1994
+    }
+  ]
+  
