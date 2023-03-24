@@ -1,0 +1,22 @@
+[
+    {
+        "rating": 5,
+        "comments": "Excellent movie"        
+    },
+    {        
+        "rating": 3,
+        "comments": "I didn't like this movie"
+    },
+    {
+        "rating": 4,
+        "comments": "It was ok"
+    },
+    {        
+        "rating": 5,
+        "comments": "This is the bext movie ever, you should not miss it" 
+    },
+    {        
+        "rating": 4,
+        "comments": "Actors were excellent, but visual effects can be better"     
+    }
+]
