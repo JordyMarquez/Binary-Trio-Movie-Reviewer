@@ -1,20 +1,16 @@
 <!-- Loop over each object in the projects array -->
 {{#each movies as |movie| }}
-<div class="row mb-4 project">
-  <div class="col-md-5">
+<div class="column is-one-quarter has-text-centered">
+  <div class="">
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/movie/{{movie.id}}">{{movie.title}}</a>
+      {{!-- {{{get_emoji}}} --}}
+      🍿
+      <a class="is-size-5 has-text-weight-medium" href="/movie/{{movie.id}}">{{movie.title}}</a>
     </h2>
-    <p>
-      <span for="img" aria-label="money">💲</span>
-      <!-- Pass needed_funding value to the helper function -->
-      <span class="dollar-amount">{{movie.year}}</span>
+    <p class="release-date"> Release date: {{ movie.year}}
     </p>
     {{!-- <p>Created by {{project.user.name}} on {{format_date project.date_created}}</p> --}}
-  </div>
-  <div class="col-md-7">
     <p>
       {{movie.genre}}
     </p>
