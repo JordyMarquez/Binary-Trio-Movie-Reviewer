@@ -10,13 +10,13 @@
     <h3>Create a Movie Review:</h3>
 
     <form class="form new-project-form">
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label for="project-name">Review Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
-      </div>
+      </div> --}}
       <div class="form-group">
         <label for="project-funding">Rating ($):</label>
-        <input class="form-input" type="number" id="project-funding" name="project-funding" />
+        <input class="form-input" type="number" id="project-funding" name="project-funding" min="0" max="5"/>
       </div>
       <div class="form-group">
         <label for="project-desc">Review:</label>
