@@ -4,29 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
+  <title>Movie Reviewer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+<body class="">
+  <div class="column">
+    <header class="display-flex justify-space-between p-4">
+      <nav class="navbar ml-6 mr-6">
+      <h1 class="is-size-2 navbar-brand">
+        <span role="img" aria-label="camera"> 🎥 </span>
+        <a class="pl-2 has-text-weight-semibold" href="/"> Movie Reviewer</a>
       </h1>
-      <nav>
         <!-- Conditionally render login or logout links -->
+        
         {{#if logged_in}}
         <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <button class="" id="logout">logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a class="button is-primary navbar-end mt-3" href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    <main class="columns is-multiline is-mobile mt-2" >
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>

@@ -17,8 +17,8 @@ header, .project:not(:last-child) {
     text-decoration: underline;
   }
   
-  .dollar-amount {
-    color: #056605;
+  .release-date {
+    color: #57a7d5;
     font-weight: bold;
     margin-left: -5px;
   }
