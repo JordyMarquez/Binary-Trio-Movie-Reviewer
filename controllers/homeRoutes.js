@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/movie/:id', async (req, res) => {
+router.get('/movie/:id', withAuth, async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
       include: [
