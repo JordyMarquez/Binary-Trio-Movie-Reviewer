@@ -1,22 +1,32 @@
 [
     {
         "rating": 5,
-        "comments": "Excellent movie"        
+        "comments": "Excellent movie",
+        "movie_id": 1,
+        "user_id": 1      
     },
     {        
         "rating": 3,
-        "comments": "I didn't like this movie"
+        "comments": "I didn't like this movie",
+        "movie_id": 2, 
+        "user_id": 2
     },
     {
         "rating": 4,
-        "comments": "It was ok"
+        "comments": "It was ok",
+        "movie_id": 3,
+        "user_id": 3
     },
     {        
         "rating": 5,
-        "comments": "This is the bext movie ever, you should not miss it" 
+        "comments": "This is the bext movie ever, you should not miss it",
+        "movie_id": 4,
+        "user_id": 3 
     },
     {        
         "rating": 4,
-        "comments": "Actors were excellent, but visual effects can be better"     
+        "comments": "Actors were excellent, but visual effects can be better",
+        "movie_id": 5,
+        "user_id": 3     
     }
 ]

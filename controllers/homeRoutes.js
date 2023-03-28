@@ -6,12 +6,13 @@ router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     const movieData = await Movie.findAll({
-      // include: [
-      //   {
-      //     model: User,
-      //     attributes: ['name'],
-      //   },
-      // ],
+      include: [
+        {
+          model: Review,
+          include: [User]
+          
+        },
+      ],
     });
 
     // Serialize data so the template can read it
@@ -30,20 +31,19 @@ router.get('/', async (req, res) => {
 router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
-      // include: [
-      //   User,
-      //   {
-      //     model: Review,
-      //     include: [User],
-      //   },
-      // ],
-      // order: [
-      //   [
-      //     { model: Review },
-      //     "date_created",
-      //     'DESC'
-      //   ]
-      // ]
+      include: [
+        {
+          model: Review,
+          include: [User],
+        },
+      ],
+      order: [
+        [
+          { model: Review },
+          "created_at",
+          'DESC'
+        ]
+      ],
       // include: [
       //   {
       //     model: User,
@@ -53,6 +53,7 @@ router.get('/movie/:id', async (req, res) => {
     });
 
     const movie = movieData.get({ plain: true });
+    console.log(JSON.stringify(movie,null,4));
 
     res.render('profile', {
       ...movie,
@@ -81,7 +82,6 @@ router.get('/profile', withAuth, async (req, res) => {
   } catch (err) {
     console.log('err :>> ', err);
     res.status(500).json(err);
-
   }
 });
 

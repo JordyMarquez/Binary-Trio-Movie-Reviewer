@@ -1,41 +1,37 @@
-<div class="row">
-  <div class="col-auto">
-    {{!-- <h2>Welcome, {{name}}!</h2>  --}}
-    {{movie.title}}
-  </div>
+<div class="columns mx-6 mt-3 has-text-dark has-text-centered">
 </div>
 
-<div class="row mt-4">
+<div class="ml-6 field">
   <div class="col-md-6">
-    <h3>Create a Movie Review:</h3>
+    <h3>Leave a Movie Review for {{title}}:</h3>
 
     <form class="form new-project-form">
       {{!-- <div class="form-group">
         <label for="project-name">Review Name:</label>
         <input class="form-input" type="text" id="project-name" name="project-name" />
       </div> --}}
-      <div class="form-group">
+      <div class="mt-2">
         <label for="project-funding">Rating out of 5 ⭐️</label>
-        <input class="form-input" type="number" id="movie-rating" name="movie-rating" min="0" max="5"/>
+        <input class="input is-small mt-1" type="number" id="movie-rating" name="movie-rating" min="0" max="5"/>
       </div>
-      <div class="form-group">
+      <div class="mt-2">
         <label for="project-desc">Review:</label>
-        <textarea class="form-input" id="movie-comments" name="movie-comments"></textarea>
+        <textarea class="input is-small mt-1" id="movie-comments" name="movie-comments"></textarea>
       </div>
-      <div class="form-group">
+      <div class="mt-2">
         <button type="submit" class="btn btn-primary">Create</button>
       </div> 
     </form>
   </div>
 
-  {{#if movies.length}}
+ 
   <div class="col-md-6 project-list">
     <h3>Current movies:</h3>
 
-    {{#each movies as |movie|}}
+    {{#each reviews as |review|}}
     <div class="row mb-2">
       <div class="col-md-8">
-        <h4><a href="/project/{{movie.id}}">{{movie.title}}</a></h4>
+        <h4>{{review.comments}}</h4>
       </div>
       <h4>{{movie.genre}}, {{movie.year}}</h4>
       <div>
@@ -45,7 +41,6 @@
     </div>
     {{/each}}
   </div>
-  {{/if}}
 </div>
 
 <script src="/js/profile.js"></script>
