@@ -31,20 +31,20 @@ router.get('/', async (req, res) => {
 router.get('/movie/:id', async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {
-      // include: [
-      //   User,
-      //   {
-      //     model: Review,
-      //     include: [User],
-      //   },
-      // ],
-      // order: [
-      //   [
-      //     { model: Review },
-      //     "date_created",
-      //     'DESC'
-      //   ]
-      // ]
+      include: [
+       
+        {
+          model: Review,
+          include: [User],
+        },
+      ],
+      order: [
+        [
+          { model: Review },
+          "created_at",
+          'DESC'
+        ]
+      ],
       // include: [
       //   {
       //     model: User,
@@ -54,6 +54,7 @@ router.get('/movie/:id', async (req, res) => {
     });
 
     const movie = movieData.get({ plain: true });
+    console.log(JSON.stringify(movie,null,4));
 
     res.render('profile', {
       ...movie,
@@ -63,6 +64,7 @@ router.get('/movie/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
