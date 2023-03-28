@@ -14,8 +14,7 @@ const newFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        //document.location.replace('/profile');
-        console.log('response :>> ', response);
+        window.location.reload();
       } else {
         alert('Failed to create a review');
       }
