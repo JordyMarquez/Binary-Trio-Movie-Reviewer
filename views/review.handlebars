@@ -1,0 +1,37 @@
+<div class="columns is-half mx-6 mt-3 has-text-dark has-text-centered is-3 ml-6">
+  <div class="column">
+    <h3>Leave a Movie Review for 
+      <span class="has-text-primary-dark"> {{title}}</span> </h3>
+
+    <form class="form new-review-form px-6">
+      <div class="mt-2">
+        <label for="review-funding">Rating out of 5 ⭐️'s:</label>
+        <input class="input is-small mt-1" type="number" width="10%" id="movie-rating" name="movie-rating" min="0" max="5"/>
+      </div>
+      <div class="mt-2">
+        <label for="review-desc">Review:</label>
+        <textarea class="input is-small mt-1" id="movie-comments" name="movie-comments"></textarea>
+      </div>
+      <div class="mt-2">
+        <button type="submit" class="button is-success is-light mt-3">Create</button>
+      </div> 
+    </form>
+  </div>
+
+ 
+  <div class="ml-6 is-half column review-list">
+    <h3> Movie Reviews</h3>
+    <div class="column mb-2 mt-2">
+    {{#each reviews as |review|}}
+      <div class="box">
+        <h4>{{review.comments}}</h4>
+      <h5 class="is-size-6" > made by {{review.user.name}} on {{format_date review.createdAt}}</h5>
+        <button class="review-delete button is-danger is-light mt-3 " data-id="{{review.id}}">Delete</button>
+      </div>
+
+    {{/each}}
+    </div>
+  </div>
+</div>
+
+<script src="/js/review.js"></script>

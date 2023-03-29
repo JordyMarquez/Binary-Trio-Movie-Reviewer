@@ -1,7 +1,6 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
     const rating = document.querySelector('#movie-rating').value.trim();
-    // const needed_funding = document.querySelector('#project-funding').value.trim();
     const comments = document.querySelector('#movie-comments').value.trim();
     
     if (rating && comments) {
@@ -40,9 +39,9 @@ const newFormHandler = async (event) => {
   //console.log('window.location.href :>> ', window.location.href.split('/')[4]);
 
   document
-    .querySelector('.new-project-form')
+    .querySelector('.new-review-form')
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.project-delete')
+    .querySelector('.review-delete')
     .addEventListener('click', delButtonHandler);
