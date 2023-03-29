@@ -12,17 +12,15 @@
 
 <body class="">
   <div class="column">
-    <header class="display-flex justify-space-between p-4">
+    <header class="">
       <nav class="navbar ml-6 mr-6">
       <h1 class="is-size-2 navbar-brand">
         <span role="img" aria-label="camera"> 🎥 </span>
         <a class="pl-2 has-text-weight-semibold" href="/"> Movie Reviewer</a>
-      </h1>
+      </h1 class="navbar-end">
         <!-- Conditionally render login or logout links -->
-        
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="" id="logout">logout</button>
+        <button class="button is-primary navbar-end mt-3" id="logout">Logout</button>
         {{else}}
         <a class="button is-primary navbar-end mt-3" href="/login">Login</a>
         {{/if}}
