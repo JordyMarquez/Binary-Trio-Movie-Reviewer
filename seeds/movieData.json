@@ -10,17 +10,17 @@
       "year": 1962
     },
     {
-      "title": "The apartment",
+      "title": "The Apartment",
       "genre": "Comedy",
       "year": 1960
     },
     {
-      "title": "The time machine",
+      "title": "The Time Machine",
       "genre": "Adventure",
       "year": 1960
     },
     {
-      "title": "The war of the worlds",
+      "title": "The War of the Worlds",
       "genre": "Thriller",
       "year": 1953
     },
@@ -48,6 +48,26 @@
       "title": "Pulp Fiction",
       "genre": "Crime",
       "year": 1994
+    },
+    {
+      "title": "Jurrasic Park",
+      "genre": "Adventure",
+      "year": 1993
+    },
+    {
+      "title": "Die Hard",
+      "genre": "Action",
+      "year": 1988
+    },
+    {
+      "title": "Full Metal Jacket",
+      "genre": "Drama",
+      "year": 1988
+    },
+    {
+      "title": "Coming to America",
+      "genre": "Comedy",
+      "year": 1988
     }
   ]
   
