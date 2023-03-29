@@ -25,6 +25,7 @@
     {{#each reviews as |review|}}
       <div class="box">
         <h4>{{review.comments}}</h4>
+        <p>{{review.rating}} ⭐️'s</p>
       <h5 class="is-size-6" > made by {{review.user.name}} on {{format_date review.createdAt}}</h5>
         <button class="review-delete button is-danger is-light mt-3 " data-id="{{review.id}}">Delete</button>
       </div>
