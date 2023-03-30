@@ -42,6 +42,14 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const movies = movieData.map((movie) => movie.get({ plain: true }));
+    
+    //console.log('object :>> ', movies[0].reviews[0].user.name);
+    movies.forEach(movie => {
+        movie.reviews.sort((a,b) => {
+            return a.createdAt < b.createdAt ? 1 : -1;
+        })
+    })
+    //console.log('movies :>> ', JSON.stringify(movies, null, 4));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 

@@ -14,10 +14,10 @@
     <p
     class="ratings">Avg rating: {{movie.starAverage}}</p>
     <p>
-    {{!-- <p
-    class="ratings">Last reviewer: {{movie.lastReviewName}}</p>
-    <p> --}}
-    {{movie.genre}}
+    <p
+    class="ratings">Last reviewer: {{movie.reviews.0.user.name}}</p>
+    <p> 
+          {{movie.genre}}
     </p>
   </div>
 </div>
