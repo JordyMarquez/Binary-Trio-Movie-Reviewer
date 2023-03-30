@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../config/connection');
 const { Movie, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -9,9 +10,33 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Review,
-          include: [User]
-          
+          include: [User]          
         },
+      ], 
+      attributes: {
+        include: [
+          [
+            // Use plain SQL to add up the total mileage
+            sequelize.literal(
+              '(SELECT ROUND(AVG(rating),2) FROM review WHERE review.movie_id = movie.id)'
+            ),
+            'starAverage',
+          ],
+          // [
+          //   // Use plain SQL to add up the total mileage
+          //   sequelize.literal(
+          //     ////'(SELECT u.name FROM user AS u JOIN review AS r JOIN movie AS m ON r.movie_id = m.id ON u.id = r.user_id WHERE r.movie_id = m.id ORDER BY r.created_at LIMIT 1)'
+          //     '(SELECT u.name FROM review r INNER JOIN movie m ON r.movie_id = m.id INNER JOIN user u ON r.user_id = u.id WHERE m.id = r.movie_id ORDER BY r.updated_at DESC LIMIT 1)'
+          //   ),
+          //   'lastReviewName',
+          // ],
+        ],
+      },
+      order: [
+        [
+          "title",
+          'ASC'
+        ]
       ],
     });
 
@@ -44,12 +69,6 @@ router.get('/movie/:id', withAuth, async (req, res) => {
           'DESC'
         ]
       ],
-      // include: [
-      //   {
-      //     model: User,
-      //     attributes: ['name'],
-      //   },
-      // ],
     });
 
     const movie = movieData.get({ plain: true });
@@ -63,27 +82,6 @@ router.get('/movie/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-// //Use withAuth middleware to prevent access to route
-// router.get('/profile', withAuth, async (req, res) => {
-//   try {
-//     // Find the logged in user based on the session ID
-//     const userData = await User.findByPk(req.session.user_id, {
-//       attributes: { exclude: ['password'] },
-//       include: [{ model: Project }],
-//     });
-
-//     const user = userData.get({ plain: true });
-
-//     res.render('profile', {
-//       ...user,
-//       logged_in: true
-//     });
-//   } catch (err) {
-//     console.log('err :>> ', err);
-//     res.status(500).json(err);
-//   }
-// });
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route

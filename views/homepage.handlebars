@@ -8,12 +8,18 @@
       🍿
       <a class="is-size-5 has-text-weight-medium" href="/movie/{{movie.id}}">{{movie.title}}</a>
     </h2>
-    <p class="release-date"> Release date: {{ movie.year}}
+    <p 
+    class="release-date"> Release date: {{movie.year}}
     </p>
-
+    <p
+    class="ratings">Avg rating: {{movie.starAverage}}</p>
     <p>
-      {{movie.genre}}
+    {{!-- <p
+    class="ratings">Last reviewer: {{movie.lastReviewName}}</p>
+    <p> --}}
+    {{movie.genre}}
     </p>
   </div>
 </div>
 {{/each}}
+
