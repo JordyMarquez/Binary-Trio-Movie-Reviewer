@@ -2,10 +2,10 @@
 {{#each movies as |movie| }}
 <div class="column is-half box has-text-centered mb-4">
   <div class="">
+    <a href="/movie/{{movie.id}}"><img src="{{movie.poster}}"  alt=""></a>
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{!-- {{{get_emoji}}} --}}
-      <img src="{{movie.poster}}" alt="">
       <a class="is-size-5 has-text-weight-medium" href="/movie/{{movie.id}}">{{movie.title}}</a>
     </h2>
     <p 
