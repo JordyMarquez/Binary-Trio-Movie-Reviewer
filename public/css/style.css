@@ -1,0 +1,34 @@
+header, .review:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .no-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #1b89bc;
+    text-decoration: none;
+    font-size: 100%;
+  }
+  
+  .no-button:hover {
+    color: #065b83;
+    text-decoration: underline;
+  }
+  
+  .release-date {
+    color: #57a7d5;
+    font-weight: bold;
+    margin-left: -5px;
+  }
+
+  .ratings{
+    color: #4381a5;
+    margin-left: -5px;
+  }
+
+  .last-reviewer{
+    color: #4381a5;
+    margin-left: -5px;
+  }

@@ -1,0 +1,24 @@
+
+{{#each movies as |movie| }}
+<div class="column is-half box has-text-centered mb-4">
+  <div class="">
+    <a href="/movie/{{movie.id}}"><img src="{{movie.poster}}"  alt=""></a>
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      <a class="is-size-5 has-text-weight-medium" href="/movie/{{movie.id}}">{{movie.title}}</a>
+    </h2>
+    <p 
+    class="release-date"> Release date: {{movie.year}}
+    </p>
+    <p
+    class="ratings">Avg rating: {{movie.starAverage}}</p>
+    <p>
+    <p
+    class="last-reviewer">Last reviewer: {{movie.reviews.0.user.name}}</p>
+    <p> 
+          {{movie.genre}}
+    </p>
+  </div>
+</div>
+{{/each}}
+

@@ -1,0 +1,87 @@
+[
+    {
+      "title": "To Kill a Mockingbird",
+      "genre": "Drama",
+      "year": 1962,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "2001: A Space Odyssey",
+      "genre": "Sci-Fi",
+      "year": 1962,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "The Apartment",
+      "genre": "Comedy",
+      "year": 1960,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzkwODFjNzItMmMwNi00MTU5LWE2MzktM2M4ZDczZGM1MmViXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg"
+    },
+    {
+      "title": "The Time Machine",
+      "genre": "Adventure",
+      "year": 1960,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMTM4YTViNGMtYTYyOS00MTViLWEyYTgtNGM0OTIwMWRmYzdhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "title": "The War of the Worlds",
+      "genre": "Thriller",
+      "year": 1953,
+      "poster": "https://m.media-amazon.com/images/M/MV5BYTViNjlmM2ItMmRhZC00ZDhkLWE2NTQtNzViMTgxNzY2MGY4XkEyXkFqcGdeQXVyNjEyNjA4ODg@._V1_SX300.jpg"
+    },
+    {
+      "title": "The Lord of the Rings: The Return of the King",
+      "genre": "Action",
+      "year": 2003,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "Avatar",
+      "genre": "Fantasy",
+      "year": 2009,
+      "poster": "https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg"
+    },
+    {
+      "title": "Titanic",
+      "genre": "Romance",
+      "year": 1997,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
+    },
+    {
+      "title": "Forrest Gump",
+      "genre": "Drama",
+      "year": 1994,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"
+    },
+    {
+      "title": "Pulp Fiction",
+      "genre": "Crime",
+      "year": 1994,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "Jurrasic Park",
+      "genre": "Adventure",
+      "year": 1993,
+      "poster": "https://m.media-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg"
+    },
+    {
+      "title": "Die Hard",
+      "genre": "Action",
+      "year": 1988,
+      "poster": "https://m.media-amazon.com/images/M/MV5BZjRlNDUxZjAtOGQ4OC00OTNlLTgxNmQtYTBmMDgwZmNmNjkxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "Full Metal Jacket",
+      "genre": "Drama",
+      "year": 1987,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+      "title": "Coming to America",
+      "genre": "Comedy",
+      "year": 1988,
+      "poster": "https://m.media-amazon.com/images/M/MV5BNGZlNjdlZmMtYTg0MC00MmZkLWIyNDktYmNlOWYzMTkzYWQ1XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg"
+    }
+  ]
+  
