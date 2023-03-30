@@ -22,3 +22,13 @@ header, .review:not(:last-child) {
     font-weight: bold;
     margin-left: -5px;
   }
+
+  .ratings{
+    color: #4381a5;
+    margin-left: -5px;
+  }
+
+  .last-reviewer{
+    color: #4381a5;
+    margin-left: -5px;
+  }

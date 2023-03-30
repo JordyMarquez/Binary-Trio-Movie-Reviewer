@@ -35,7 +35,7 @@
 
 ## Preview
 
- ![movieReview](./assets/images/under_construction.jpg)
+ ![movieReview](./assets/images/movie_reviewer.jpg)
 
 ## Links
 
