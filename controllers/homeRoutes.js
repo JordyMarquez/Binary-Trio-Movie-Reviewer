@@ -22,14 +22,6 @@ router.get('/', async (req, res) => {
             ),
             'starAverage',
           ],
-          // [
-          //   // Use plain SQL to add up the total mileage
-          //   sequelize.literal(
-          //     ////'(SELECT u.name FROM user AS u JOIN review AS r JOIN movie AS m ON r.movie_id = m.id ON u.id = r.user_id WHERE r.movie_id = m.id ORDER BY r.created_at LIMIT 1)'
-          //     '(SELECT u.name FROM review r INNER JOIN movie m ON r.movie_id = m.id INNER JOIN user u ON r.user_id = u.id WHERE m.id = r.movie_id ORDER BY r.updated_at DESC LIMIT 1)'
-          //   ),
-          //   'lastReviewName',
-          // ],
         ],
       },
       order: [
@@ -43,13 +35,12 @@ router.get('/', async (req, res) => {
     // Serialize data so the template can read it
     const movies = movieData.map((movie) => movie.get({ plain: true }));
     
-    //console.log('object :>> ', movies[0].reviews[0].user.name);
+    // Sort reviews by created date to show the latest reviewer
     movies.forEach(movie => {
         movie.reviews.sort((a,b) => {
             return a.createdAt < b.createdAt ? 1 : -1;
         })
     })
-    //console.log('movies :>> ', JSON.stringify(movies, null, 4));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -61,6 +52,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+// API route to get movie by id
 router.get('/movie/:id', withAuth, async (req, res) => {
   try {
     const movieData = await Movie.findByPk(req.params.id, {

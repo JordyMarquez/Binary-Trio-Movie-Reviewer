@@ -2,14 +2,13 @@ const router = require('express').Router();
 const { Review } = require('../../models');
 const withAuth = require('../../utils/auth')
 
+// API Route to create a new review
 router.post('/', withAuth,  async (req, res) => {
-  console.log('****** :>> ');
   try {
     const newReview = await Review.create({
       ...req.body,
       user_id: req.session.user_id,
     });
-    console.log('newReview :>> ', newReview);
     res.status(200).json(newReview);
   } catch (err) {
     console.log('err :>> ', err);
@@ -17,6 +16,7 @@ router.post('/', withAuth,  async (req, res) => {
   }
 });
 
+// API Route to delete a review
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const reviewData = await Review.destroy({
