@@ -40,7 +40,7 @@
 ## Links
 
 - Deployed Application URL: https://binary-trio-movie-reviewer.herokuapp.com/
-- Repository URL: https://github.com/JordyMarquez/Group-Project-2
+- Repository URL: https://github.com/JordyMarquez/Binary-Trio-Movie-Reviewer
 
 ## Credits
 - Jordy Marquez (https://github.com/JordyMarquez)
