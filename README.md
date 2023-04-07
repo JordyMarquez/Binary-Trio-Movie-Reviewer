@@ -24,14 +24,14 @@
 
 ## Usage
 - To use the user should run msyql -uroot and npm run seeds to seed the data. The following is a list of packages needed for the app: 
-"bcrypt": "^5.1.0",
-       "connect-session-sequelize": "^7.1.5",
-       "dotenv": "^16.0.3",
-       "express": "^4.18.2",
-       "express-handlebars": "^7.0.2",
-       "express-session": "^1.17.3",
-       "mysql2": "^3.2.0",
-       "sequelize": "^6.29.3
+       "bcrypt": "\^5.1.0",
+       "connect-session-sequelize": "\^7.1.5",
+       "dotenv": "\^16.0.3",
+       "express": "\^4.18.2",
+       "express-handlebars": "\^7.0.2",
+       "express-session": "\^1.17.3",
+       "mysql2": "\^3.2.0",
+       "sequelize": "\^6.29.3
 
 ## Preview
 
