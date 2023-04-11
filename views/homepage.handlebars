@@ -1,3 +1,18 @@
+{{!-- <form name="sort" id="sort-form" class = "dropdown is-hoverable">
+Sort by Avg Rating: <select name="direction" id="direction">
+    <option value="Asc">Lowest to Highest</option>
+    <option value="Desc">Highest to Lowest</option>
+  </select>
+</form> --}}
+
+{{!-- <label>Sort by avg rating</label> --}}
+<select>
+    {{#select status}}
+    <option value="Asc">Lowest to Highest</option>
+    <option value="Desc">Highest to Lowest</option>
+    {{/select}}
+</select>
+
 
 {{#each movies as |movie| }}
 <div class="column is-half box has-text-centered mb-4">
@@ -22,3 +37,4 @@
 </div>
 {{/each}}
 
+<script src="/js/sort.js"></script>

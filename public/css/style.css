@@ -32,3 +32,10 @@ header, .review:not(:last-child) {
     color: #4381a5;
     margin-left: -5px;
   }
+
+  #sort-form{
+    align-items: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 10px 0 0;
+  }

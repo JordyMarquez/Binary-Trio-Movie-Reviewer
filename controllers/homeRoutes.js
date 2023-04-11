@@ -4,6 +4,17 @@ const { Movie, User, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
+  
+  //console.log('req.params :>> ', req.query);
+  let myOrder = [];
+  if (req.query.sort === 'Asc') {
+    myOrder =  [['starAverage','ASC']];
+  }
+  else{
+    myOrder =  [['starAverage','DESC']];
+  } 
+
+
   try {
     // Get all movies and JOIN with user data
     const movieData = await Movie.findAll({
@@ -24,12 +35,7 @@ router.get('/', async (req, res) => {
           ],
         ],
       },
-      order: [
-        [
-          "title",
-          'ASC'
-        ]
-      ],
+      order: myOrder,
     });
 
     // Serialize data so the template can read it
@@ -45,7 +51,8 @@ router.get('/', async (req, res) => {
     // Pass serialized data and session flag into template
     res.render('homepage', { 
       movies, 
-      logged_in: req.session.logged_in 
+      logged_in: req.session.logged_in,
+      sort 
     });
   } catch (err) {
     res.status(500).json(err);
